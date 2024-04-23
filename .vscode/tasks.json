@@ -1,0 +1,38 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+              "type": "shell",
+              "label": "Opencv4.5.5 compile task",
+                /*修改*/
+              "command": "D:/Application/Development/mingw64/bin/g++.exe",
+              "args": [
+                  "-g",
+                  "-std=c++11",
+                  "${file}",
+                  "-o",
+                  "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                  /*注意：此处导入的路径为编译后的opencv路径，请勿导入原始的opencv路径*/
+                  "-I", "D:/Application/Development/opencv-4.7.0_build/install/include/",
+                  "-I", "D:/Application/Development/opencv-4.7.0_build/install/include/opencv2/",
+                  "-L", "D:/Application/Development/opencv-4.7.0_build/install/x64/mingw/bin/lib*"
+              ],// 编译命令参数
+              "options": {
+                   /*修改*/
+                  "cwd": "D:/Application/Development/mingw64/bin"
+              },
+              "problemMatcher": [
+                  "$gcc"
+              ],
+              "group": {
+                  "kind": "build",
+                  "isDefault": true
+              },
+              "presentation": {
+                  "panel": "new", //这里shared表示共享，改成new之后每个进程创建新的端口
+              }
+        }
+    ]
+}
