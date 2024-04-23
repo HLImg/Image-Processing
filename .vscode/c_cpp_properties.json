@@ -3,7 +3,9 @@
     {
       "name": "windows-gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**",
+        "D:/Application/Development/opencv-4.7.0_build/install/include/",
+        "D:/Application/Development/opencv-4.7.0_build/install/include/",
       ],
       "defines": [
         "_DEBUG",
