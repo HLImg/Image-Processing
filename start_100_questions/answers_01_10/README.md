@@ -63,14 +63,17 @@ HSV即使用色相（Hue）、饱和度（Saturation）和明度（Value）来�
 将通过以下方式从RGB色彩表示转换到HSV色彩表示，RGB的取值范围为 $[0, 1]$，令：
 
 $$
-\max = \max(R, G, B)\\
+\max = \max(R, G, B)
+$$
+
+$$
 \min = \min(R, G, B) 
 $$
 
 则，HSV的三个属性分别计算如下：
 
 $$
-H(ue) = \left\{ \begin{array}{l}
+H(ue) = \left[ \begin{array}{l}
 0, (\text{if} \min == \max)\\
 60 \cdot \frac{G - R}{\max - \min} + 60,  (\text{if} \min == B)\\
 60 \cdot \frac{B - G}{\max - \min} + 180,  (\text{if} \min == R)\\
@@ -101,7 +104,7 @@ X = C\cdot (1 - |H' \text{mod} 2 - 1|)
 $$
 
 $$
-(R, G, B) = (V - C) \cdot (1, 1, 1) + \left\{ \begin{array}{l}
+(R, G, B) = (V - C) \cdot (1, 1, 1) + \left\[ \begin{array}{l}
 (0, 0, 0), (\text{if H is undefined})\\
 (C, X, 0), (\text{if } 0\le H'<1)\\
 (X, C, 0), (\text{if } 1\le H'<2)\\
