@@ -104,7 +104,7 @@ X = C\cdot (1 - |H' \text{mod} 2 - 1|)
 $$
 
 $$
-(R, G, B) = (V - C) \cdot (1, 1, 1) + \left\[ \begin{array}{l}
+(R, G, B) = (V - C) \cdot (1, 1, 1) + \left[ \begin{array}{l}
 (0, 0, 0), (\text{if H is undefined})\\
 (C, X, 0), (\text{if } 0\le H'<1)\\
 (X, C, 0), (\text{if } 1\le H'<2)\\
