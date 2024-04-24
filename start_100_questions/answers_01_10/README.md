@@ -80,7 +80,6 @@ $$
 
 $$
 S(aturation)=\max - \min \\
-
 V(alue) = \max
 $$
 
@@ -88,9 +87,7 @@ $$
 
 $$
 C = S \\
-
 H' = \frac{H}{60} \\
-
 X = C\cdot (1 - |H' \text{mod} 2 - 1|)\\
 $$
 
