@@ -60,7 +60,7 @@ HSV即使用色相（Hue）、饱和度（Saturation）和明度（Value）来�
 - 饱和度：色彩的纯度，饱和度越低则颜色越暗淡（$0\le S <1$）
 - 明度：颜色的明亮程度，数值越高越接近白色，数值越低越接近黑色（$0\le V < 1$）
   
-将通过以下方式从RGB色彩表示转换到HSV色彩表示，RGB的取值范围为$[0, 1]$，令：
+将通过以下方式从RGB色彩表示转换到HSV色彩表示，RGB的取值范围为 $[0, 1]$，令：
 
 $$
 \max = \max(R, G, B)\\
@@ -70,17 +70,17 @@ $$
 则，HSV的三个属性分别计算如下：
 
 $$
-\begin{aligned}
-H(ue) &= \left\{ \begin{array}{l}
+H(ue) = \left\{ \begin{array}{l}
 0, (\text{if} \min == \max)\\
 60 \cdot \frac{G - R}{\max - \min} + 60,  (\text{if} \min == B)\\
 60 \cdot \frac{B - G}{\max - \min} + 180,  (\text{if} \min == R)\\
 60 \cdot \frac{R - B}{\max - \min} + 300,  (\text{if} \min == G)\\
-\end{array} \right. \\
+\end{array} \right. 
+$$
 
-S(aturation)&=\max - \min \\
-V(alue) &= \max
-\end{aligned}
+$$
+S(aturation)=\max - \min \\
+V(alue) = \max
 $$
 
 从HSV色彩转换到RGB色彩通过以下上式计算：
@@ -107,3 +107,4 @@ $$
 |   输入   |   输出    | 
 | ---- | ---- |
 |   ![](./q_1/kodim08.png)   |   ![](./q_5/output/answer.png)   | 
+
