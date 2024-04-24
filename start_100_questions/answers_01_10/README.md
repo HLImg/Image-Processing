@@ -79,16 +79,25 @@ H(ue) = \left\{ \begin{array}{l}
 $$
 
 $$
-S(aturation)=\max - \min \\
+S(aturation)=\max - \min
+$$
+
+$$
 V(alue) = \max
 $$
 
 从HSV色彩转换到RGB色彩通过以下上式计算：
 
 $$
-C = S \\
-H' = \frac{H}{60} \\
-X = C\cdot (1 - |H' \text{mod} 2 - 1|)\\
+C = S 
+$$
+
+$$
+H' = \frac{H}{60}
+$$
+
+$$
+X = C\cdot (1 - |H' \text{mod} 2 - 1|)
 $$
 
 $$
