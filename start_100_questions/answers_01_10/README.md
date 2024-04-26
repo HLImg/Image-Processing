@@ -150,3 +150,39 @@ $$
 |   输入   |   输出    | 
 | ---- | ---- |
 |   ![](./q_1/kodim08.png)   |   ![](./q_8/output/answer.png)   | 
+
+### 9.高斯滤波
+使用高斯滤波器（大小为3x3，标准差为1.3）对图像进行降噪处理
+
+由于图像的长宽不是滤波器大小的整数倍，因此需要在图像的边缘填充，并且权重值（卷积核）要进行归一化操作，按照下面的高斯分布公式计算权值
+
+$$
+g(x, y, \sigma) = \frac{1}{2\pi\cdot \sigma^2} \cdot e^{-\frac{x^2+y^2}{2\sigma^2}}
+$$
+
+```python
+sigma = 0.8
+ksize = 3
+center = ksize // 2
+
+new_kernel = np.zeros(shape=(ksize, ksize), dtype=np.float32)
+
+for x in range(0, ksize):
+    x2 = (x - center) ** 2
+    for y in range(0, ksize):
+        y2 = (y - center) ** 2
+        g = np.exp(-(x2 + y2) / (2 * sigma * sigma))
+        g = g / (2 * np.pi * sigma * sigma)
+        new_kernel[x, y] = g
+```
+
+|   输入   |   输出    | 
+| ---- | ---- |
+|   ![](./q_9/input.png)   |   ![](./q_9/output/answer.png)   | 
+
+### 10.中值滤波
+使用中值滤波进行降噪处理
+
+|   输入   |   输出    | 
+| ---- | ---- |
+|   ![](./q_1/kodim08.png)  |   ![](./q_10/output/answer.png)   | 

@@ -9,5 +9,5 @@
 |   6   |   减色处理   |   [answer_06.cpp](./answers_01_10/q_6/answer_06.cpp)   |
 |   7  |   平均池化    |   [answer_07.cpp](./answers_01_10/q_7/answer_07.cpp)   |
 |   8  |    最大池化   |    [answer_08.cpp](./answers_01_10/q_8/answer_08.cpp)  |
-|    9  |   高斯滤波   |      |
-|   10   |    中值滤波  |      |
+|    9  |   高斯滤波   |   [answer_09.cpp](./answers_01_10/q_8/answer_09.cpp)   |
+|   10   |    中值滤波  |  [answer_10.cpp](./answers_01_10/q_8/answer_10.cpp)     |
